@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Report</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .weather-container {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .weather-container h1 {
-            text-align: center;
-        }
-        .weather-detail {
-            margin: 10px 0;
-        }
-    </style>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Weather Report{% endblock %}
+{% block content %}
     <div class="weather-container">
         <h1>Weather Report for {{ data['name'] }}, {{ data['sys']['country'] }}</h1>
         <div class="weather-detail"><strong>Temperature:</strong> {{ data['main']['temp'] }} K</div>
@@ -39,5 +14,4 @@
         <div class="weather-detail"><strong>Sunrise:</strong> {{ data['sys']['sunrise'] }}</div>
         <div class="weather-detail"><strong>Sunset:</strong> {{ data['sys']['sunset'] }}</div>
     </div>
-</body>
-</html>
+{% endblock %}

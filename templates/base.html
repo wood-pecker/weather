@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}Weather App{% endblock %}</title>
+</head>
+<body>
+    <header>
+    <div class="search-container">
+        <form method="post">
+            <label for="name">Location:</label>
+            <input type="text" id="name" name="name" required maxlength="18" size="40"/>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    </header>
+    <div id="content">{% block content %}{% endblock %}</div>
+</body>
+</html>

@@ -12,7 +12,7 @@ def index():
         else:
             return '<h2>Check the entered data and try again!</h2>'
     else:
-        return render_template('index.html')
+        return render_template('base.html')
 
 
 if __name__ == '__main__':

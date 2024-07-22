@@ -3,15 +3,12 @@
 {% block content %}
     <div class="weather-container">
         <h1>Weather Report for {{ data['name'] }}, {{ data['sys']['country'] }}</h1>
-        <div class="weather-detail"><strong>Temperature:</strong> {{ data['main']['temp'] }} K</div>
-        <div class="weather-detail"><strong>Feels Like:</strong> {{ data['main']['feels_like'] }} K</div>
+        <div class="weather-detail"><strong>Temperature:</strong> {{ data['main']['temp'] }} °C</div>
+        <div class="weather-detail"><strong>Feels Like:</strong> {{ data['main']['feels_like'] }} °C</div>
         <div class="weather-detail"><strong>Humidity:</strong> {{ data['main']['humidity'] }} %</div>
         <div class="weather-detail"><strong>Pressure:</strong> {{ data['main']['pressure'] }} hPa</div>
         <div class="weather-detail"><strong>Weather:</strong> {{ data['weather'][0]['description'] }}</div>
         <div class="weather-detail"><strong>Wind Speed:</strong> {{ data['wind']['speed'] }} m/s</div>
-        <div class="weather-detail"><strong>Wind Direction:</strong> {{ data['wind']['deg'] }}°</div>
         <div class="weather-detail"><strong>Cloudiness:</strong> {{ data['clouds']['all'] }} %</div>
-        <div class="weather-detail"><strong>Sunrise:</strong> {{ data['sys']['sunrise'] }}</div>
-        <div class="weather-detail"><strong>Sunset:</strong> {{ data['sys']['sunset'] }}</div>
     </div>
 {% endblock %}
